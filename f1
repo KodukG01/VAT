@@ -1,0 +1,50 @@
+// Java Program to Convert Decimal Number to Octal Number
+
+// Importing input output classes
+import java.io.*;
+
+// Main class
+class GFG {
+
+	// Method 1
+	// To calculate the octal value of the given
+	// decimal number
+	static void decimaltooctal(int deciNum)
+	{
+
+		// Initially declaring and initializing the
+		// octal number with zero
+		int octalNum = 0, countval = 1;
+		int dNo = deciNum;
+
+		// Condition check
+		while (deciNum != 0) {
+
+			// Decimals remainder is calculated
+			int remainder = deciNum % 8;
+
+			// Storing the octalvalue
+			octalNum += remainder * countval;
+
+			// Storing exponential value
+			countval = countval * 10;
+			deciNum /= 8;
+		}
+
+		// Print and display the octal number
+		System.out.println(octalNum);
+	}
+
+	// Method 2
+	// Main driver method
+	public static void main(String[] args)
+	{
+		// Custom input decimal number
+		int n = 33;
+
+		// Calling the Method1 to convert above number
+		// to Octal number system
+		decimaltooctal(n);
+	}
+}
+
